@@ -45,7 +45,7 @@
 
 <script>
 	import Quill from 'quill'
-	const STATICDOMAIN = 'http://nuotasuo.com/' // 图片服务器的域名，展示时使用
+	const STATICDOMAIN = 'http://cdn.xjun.cloud/' // 图片服务器的域名，展示时使用
 	//const STATVIDEO = 'http://nuotasuo.com/'//视频服务器的域名，展示时使用
 	//require style
 	import 'quill/dist/quill.core.css' // import styles

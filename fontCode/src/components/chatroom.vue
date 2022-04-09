@@ -85,7 +85,8 @@
 				console.log(this.$store.state.hasRoomws)
 				if (!this.$store.state.hasRoomws) {
 					this.$store.commit('createRoomws')
-					_this.ws = new WebSocket("wss://chat.nuotasuo.com:3001");
+					//_this.ws = new WebSocket("wss://chat.nuotasuo.com:3001");   
+					_this.ws = new WebSocket("wss://xjun.cloud:3001");   
 					console.log(_this.ws)
 					_this.ws.onopen = function(e) {
 						console.log("服务器连接成功");
