@@ -1,0 +1,28 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view style="font-size:12px" slot="middle">消息列表</view></cu-custom>
+<view class="cu-list menu-avatar">
+    <view class="cu-item" style="border-bottom:1px solid #EEE">
+      <view class="cu-avatar round lg" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+      <view class="content">
+        <view class="text-grey">Nuota</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="cuIcon-title text-green  margin-right-xs">在线</text> 
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="cu-tag round bg-grey sm">2</view>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cu-avatar round lg" style="background-image:url(http://nuotasuo.com/avtar/_20210504011025.png);"></view>
+      <view class="content">
+        <view class="text-grey">Tom</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="cuIcon-title text-red  margin-right-xs">离线</text> 
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>

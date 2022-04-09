@@ -1,0 +1,15 @@
+1.前端代码运行
+进入前端代码目录，在当前目录打开CMD，输入npm install （确保系统已安装Node.js）下载相关依赖，输入npm run serve（确保8080端口未被占用），运行成功浏览器输入http://localhost:8080/
+
+2.管理员页面代码运行
+进入前端代码目录，在当前目录打开CMD，输入npm install （确保系统已安装Node.js）下载相关依赖，输入npm run dev（确保8081端口未被占用），运行成功浏览器输入http://localhost:8081/
+
+2.后端代码运行
+安装MongoDB，在MongoDB下新建login 数据库，导入articles.json、comments.json、user.json数据集合（保证27017端口未被占用）
+进入后端代码目录，在当前目录打开CMD，输入npm run server（保证系统已安装Node.js，保证3000端口未被占用）
+
+3.小程序端代码运行
+打开微信开发者工具，选择导入程序，选择小程序端代码目录导入即可运行
+
+4.聊天室代码
+已运行在云服务器端

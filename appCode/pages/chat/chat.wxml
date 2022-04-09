@@ -1,0 +1,118 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view style="font-size:14px" slot="middle">Nuota</view></cu-custom>
+<scroll-view class="cu-chat" scroll-y="true" style="padding-bottom:50px;height:{{ScreenHeight - CustomBar - InputBottom}}px;" scroll-into-view="{{tobottom}}" scroll-with-animation="true" enable-flex="true">
+  <view  class="cu-item self">
+    <view class="main">
+      <view class="content shadow  bg-green">
+        <text>234</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="date">11:21</view>
+  </view>
+  <view  class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="main">
+      <view class="content shadow  bg-blue">
+        <text>234</text>
+      </view>
+    </view>
+    <view class="date">11:21</view>
+  </view>
+  <view  class="cu-item self">
+    <view class="main">
+      <view class="content shadow  bg-green">
+        <text>234</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="date">11:21</view>
+  </view>
+  <view  class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="main">
+      <view class="content shadow  bg-blue">
+        <text>234</text>
+      </view>
+    </view>
+    <view class="date">11:21</view>
+  </view>
+  <view  class="cu-item self">
+    <view class="main">
+      <view class="content shadow  bg-green">
+        <text>234</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="date">11:21</view>
+  </view>
+  <view  class="cu-item self">
+    <view class="main">
+      <view class="content shadow  bg-green">
+        <text>我来自广东，你呢？</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="date">11:07</view>
+  </view>
+  <view  class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="main">
+      <view class="content shadow  bg-blue">
+        <text>我是广东广州人</text>
+      </view>
+    </view>
+    <view class="date">11:13</view>
+  </view>
+  <view  class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="main">
+      <view class="content shadow  bg-blue">
+        <text>目前在读大学</text>
+      </view>
+    </view>
+    <view class="date">11:19</view>
+  </view>
+  <view  class="cu-item self">
+    <view class="main">
+      <view class="content shadow  bg-green">
+        <text>一样</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="date">11:23</view>
+  </view>
+  <view  class="cu-item self">
+    <view class="main">
+      <view class="content shadow  bg-green">
+        <text>我也是读大学中~</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="date">11:24</view>
+  </view>
+  <view  class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="main">
+      <view class="content shadow  bg-blue">
+        <text>哈哈，好巧~</text>
+      </view>
+    </view>
+    <view class="date">11:28</view>
+  </view>
+  <view  class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="main">
+      <view class="content shadow  bg-blue">
+        <text>找个时间一起出来玩~</text>
+      </view>
+    </view>
+    <view class="date">11:31</view>
+  </view>
+</scroll-view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" model:value="{{inputValue}}" hold-keyboard="{{true}}" adjust-position="{{false}}" focus="isfocus" maxlength="300" cursor-spacing="10"></input>
+
+  <button class="cu-btn bg-green shadow" style="width:25%" bindtap="sendText">发送</button>
+</view>

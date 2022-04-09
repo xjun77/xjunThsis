@@ -1,0 +1,53 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view style="font-size:12px" slot="middle">个人中心</view></cu-custom>
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="{{imgList}}" class="png" mode="widthFix"></image>
+    <view class="text-xl margin-top-xl">{{username}}
+    </view>
+    <view class="margin-top-sm">
+      <text>个性签名：{{slog}}</text>
+    </view>
+    <view class="margin-top-sm">
+      <text class="margin-right-lg">手机号：{{phone}}</text>
+      <text>邮箱：{{email}}</text>
+    </view>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{visitTotal}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-attentionfill"></text> 文章总数</view>
+    </view>
+    <!-- <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{starCount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill"></text> 今日</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">{{forksCount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-fork"></text> 昨日</view>
+    </view> -->
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <buttton class="cu-btn content" bindtap="topersonart">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">我的资讯</text>
+      </buttton>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="topersonl">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">修改个人信息</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="topassword">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">修改密码</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

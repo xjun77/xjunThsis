@@ -1,0 +1,80 @@
+<!--pages/home/home.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
+  <view slot="content" style="width:50px;line-height:{{CustomBar - StatusBar}}px;text-align:center" bindtap="showModal"
+    data-target="viewModal">≡</view>
+  <view slot="middle" style="font-size:15px">首页</view>
+</cu-custom>
+<scroll-view scroll-y class="DrawerPage {{modalName=='viewModal'?'show':''}}" bindscrolltolower="tolower" refresher-enabled="true" refresher-default-style="black" style="height:calc(100vh - {{CustomBar}}px)" bindrefresherrefresh="refresher" refresher-triggered="true">
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <view class="cu-card case" wx:for="{{arts}}" wx:key="index">
+      <view class="cu-item shadow">
+        <view class="image" style="max-height:200px" bindtap="todetail" data-artid="{{item.ID}}">
+          <image src="{{item.photo_url}}" mode="widthFix"></image>
+          <!-- <view class="cu-tag bg-blue">史诗</view> -->
+          <view class="cu-bar bg-shadeBottom">
+            <text class="text-cut">{{item.title}}</text>
+          </view>
+        </view>
+        <view class="cu-list menu-avatar">
+          <view class="cu-item">
+            <view class="cu-avatar round lg" style="background-image:url({{item.avatar}});">
+            </view>
+            <view class="content flex-sub">
+              <view class="text-grey">{{item.username}}</view>
+              <view class="text-gray text-sm flex justify-between">
+                {{item.updateTIME}}
+                <view class="text-gray text-sm">
+                  <view class="cu-tag bg-blue light">{{item.tag[0]}}</view>
+                  <view wx:if="{{item.tag.length>1}}" class="cu-tag bg-green light">{{item.tag[1]}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="DrawerClose {{modalName=='viewModal'?'show':''}}" bindtap="hideModal">
+  <text class="cuIcon-pullright"></text>
+</view>
+<scroll-view scroll-y class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style="margin-top:{{CustomBar}}px">
+    <view class="cu-item arrow" hover-class="hoveritem">
+      <view class="content">
+        <text class="cuIcon-search text-grey"></text>
+        <text class="text-grey">搜索</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="cuIcon-markfill text-grey"></text>
+        <text class="text-grey">消息</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="toChatroom">
+      <view class="content">
+        <text class="cuIcon-communityfill text-grey"></text>
+        <text class="text-grey">聊天室</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="toperson">
+      <view class="content">
+        <text class="cuIcon-peoplefill text-grey"></text>
+        <text class="text-grey">个人中心</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="cuIcon-infofill text-grey"></text>
+        <text class="text-grey">关于网站</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="loginOut">
+      <view class="content">
+        <text class="cuIcon-roundrightfill text-grey"></text>
+        <text class="text-grey">退出</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

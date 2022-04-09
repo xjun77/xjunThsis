@@ -1,0 +1,27 @@
+page{
+  background-color: white;
+}
+
+input{
+  margin: auto 0;
+}
+.box{
+  width: 100%;
+  margin-top: 15%;
+}
+
+.ipt1{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 20rpx;
+  width:400rpx;
+  height:70rpx;
+  margin: 50rpx auto;
+}
+.img1{
+  margin:auto 10rpx;
+  margin-top: 10rpx;
+  float:left;
+  width:50rpx;
+  height:50rpx;
+}

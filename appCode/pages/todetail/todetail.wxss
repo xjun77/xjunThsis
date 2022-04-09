@@ -1,0 +1,5 @@
+/* pages/todetail/todetail.wxss */
+.context{
+  border:1px solid #777;
+  padding:10px;
+}

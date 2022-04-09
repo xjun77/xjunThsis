@@ -1,0 +1,53 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="middle">资讯详情</view></cu-custom>
+
+<view style="width:95%;background-color:#FFF;margin:10px auto;margin-bottom:0;border-radius:5px;padding:10px">
+  <text style="font-size:20px;font-weight:bold;margin-left:10px;line-height:40px;display:block">{{title}}</text>
+<text style="font-size:12px;display:block;margin-left:10px;line-height:20px">作者：<text style="color:rgb(23, 147, 234)">{{username}}</text></text>
+<text style="font-size:12px;display:block;margin-left:10px;line-height:20px">创建时间：{{createTime}}</text>
+<text style="font-size:12px;display:block;margin-left:10px;line-height:20px">最后修改：{{updateTime}}</text>
+  <view class="context" >
+    <!-- <view style="font-weight:bold;margin-bottom:10px">03-04、04-05、05-06三连冠，紧接着又是07-08、08-09、09-10、10-11四连冠，以及2019-2021年三连冠，广东成为CBA历史上首支3次完成至少3连冠球队。</view>
+    <view style="margin-bottom:10px">CBA史策，广东独一档。回归广东队的三个赛季，广东队主教练杜锋连续第三个赛季带队夺冠，证明了自己是当之无愧的“最佳主教练”。</view>
+    <view style="margin-bottom:10px">本赛季，杜锋以压倒性的优势击败浙江队主教练刘维伟等对手，连续第三个赛季捧起“澄海杯”，连续第三个赛季成为CBA的最佳主教练。在CBA历史上，能够连续三个赛季拿到最佳主教练的并不多，上一次做到的还是李春江（2008-2010）。也就是说，最近11年，只有杜锋一人连续三个赛季拿到了最佳主教练的奖杯。</view>
+    <image style="margin-bottom:10px" mode="widthFix" src="http://nuotasuo.com/image/微信图片_20210407000410_1621156216907.jpg"></image>
+    <view >下个赛季，广东等待易建联，马尚回归，他们依旧是新赛季总冠军的头号热门，他们有望继续为这支伟大的球队不断增加荣誉。大家认为广东接下来还会延续夺冠步伐吗？</view> -->
+    <rich-text nodes="{{context}}"></rich-text>
+  </view>
+</view>
+<view class="box" style="margin-top:10px;background-color:rgb(233,238,243)">
+  <view class="cu-bar input">
+    <view class="cu-avatar round" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+
+    <input class="solid-bottom" maxlength="300" cursor-spacing="10" placeholder="输入评论..."></input>
+
+    <button class="cu-btn bg-green shadow-blur" style="width:20%">发送</button>
+  </view>
+</view>
+<view class="cu-card dynamic {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar comment solids-top">
+      <view class="cu-item" style="border-bottom:1px solid rgba(99,103,108,0.3)" wx:for="{{comments}}" wx:key="*this">
+        <view class="cu-avatar round" style="background-image:url({{item.headImg}});"></view>
+        <view class="content">
+          <view >{{item.name}}</view><text class="text-grey" style="font-size:12px">{{item.time}}</text>
+          <view class=" text-content text-df">
+            {{item.comment}}
+          </view>
+          <view class="bg-grey padding-sm radius text-sm" style="margin-bottom:1px" wx:for="{{item.reply}}" wx:key="*this"
+           wx:for-index="idx" wx:for-item="itemName">
+            <view class="flex align-center">
+              <view class="cu-avatar round margin-xs " style="background-image:url({{itemName.fromHeadImg}});"></view>
+              <view class="margin-xs ">
+                <view>{{itemName.time}}</view>
+                <view>{{itemName.fromwho}}<text wx:if="{{!itemName.isdirect}}"> 回复 {{itemName.towho}}</text>：</view>
+              </view>
+            </view>
+            
+            <view>{{itemName.comment}}</view>
+           
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

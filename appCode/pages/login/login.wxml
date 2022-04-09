@@ -1,0 +1,12 @@
+<image src='/images/BasicsBg.png' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+<view class="box">
+    <view class="ipt1">
+      <image src="/icon/user.png" class="img1"></image>
+      <input focus model:value="{{username}}" placeholder="请输入用户名" maxlength="10"></input>
+    </view>
+    <view class="ipt1">
+      <image src="/icon/pass.png" class="img1"></image>
+      <input model:value="{{password}}" placeholder="请输入密码" password="true" maxlength="18"></input>
+    </view>
+    <button class="bg-gradual-blue" style="width:35%;margin-top:100rpx" bindtap="login">登录</button>
+</view>

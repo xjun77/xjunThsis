@@ -1,0 +1,33 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="middle">搜索</view>
+</cu-custom>
+<view class="cu-bar search bg-white">
+  <picker mode="selector"><view style="padding-left:10px">标题<text class="cuIcon-triangledownfill lg text-gray"></text></view></picker>
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow-blur round" style="width:100%">搜索</button>
+  </view>
+</view>
+<view class="cu-card article {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">第11个总冠军 广东王朝再续！</view>
+    </view>
+    <view class="content">
+      <image src="http://nuotasuo.com/image/_20210503150929_1620025803368.png" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">广东成为CBA历史上首支3次完成至少3连冠球队。</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">CBA</view>
+          <view class="cu-tag bg-green light sm round">总决赛</view>
+          <view class="cu-tag bg-blue light sm round">广东东莞大益</view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

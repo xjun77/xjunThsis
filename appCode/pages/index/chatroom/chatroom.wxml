@@ -1,0 +1,21 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">聊天室：{{Numcount}}</view></cu-custom>
+<scroll-view id="sc" class="cu-chat" scroll-y="true" style="padding-bottom:50px;height:{{ScreenHeight - CustomBar - InputBottom}}px;" scroll-into-view="{{tobottom}}" scroll-with-animation="true" enable-flex="true" ref>
+  <view  wx:for="{{list}}" wx:key="this" class="cu-item  {{user.username == item.username?'self':''}}">
+    <view wx:if="{{user.username != item.username}}" class="cu-avatar radius" style="background-image:url({{item.userAvater}});"></view>
+    <view class="main">
+      <view class="content shadow  {{user.username == item.username?'bg-green':'bg-blue'}}">
+        <text>{{item.content}}</text>
+      </view>  
+    </view>
+    <view wx:if="{{user.username ==item.username}}" class="cu-avatar radius" style="background-image:url({{item.userAvater}});"></view>
+    <view class="date">{{item.time}}</view>
+  </view>
+  <view id="bottom"></view>
+</scroll-view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" model:value="{{inputValue}}" hold-keyboard="{{true}}" adjust-position="{{false}}" focus="isfocus" maxlength="300" cursor-spacing="10"></input>
+
+  <button class="cu-btn bg-green shadow" style="width:25%" bindtap="sendText">发送</button>
+</view>
