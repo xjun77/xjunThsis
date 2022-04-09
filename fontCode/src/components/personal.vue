@@ -48,7 +48,7 @@
 			<div v-show="indexItem == 2">
 				<span>资讯列表</span>
 				<div style="margin: 5px;font-size: 15px;">共<span style="margin: 0 2px;">{{counts}}</span>篇</div>
-				<el-card class="art-card" v-for="(art,index) in arts">
+				<el-card class="art-card" v-for="(art,index) in arts" :key="index">
 					<div slot="header" class="clearfix">
 						<span>标题： {{art.title}}</span>
 						<el-button style="float: right; padding: 3px 0;color: red;" type="text" @click="todelete(index,art.ID)">删除</el-button>
@@ -56,7 +56,7 @@
 					</div>
 					<span>{{art.createTIME}}</span>
 					<span style="float: right;">
-						<el-tag style="margin: 0 8px;" v-for="tag in art.tag">{{tag}}</el-tag>
+						<el-tag style="margin: 0 8px;" v-for="(tag,index) in art.tag" :key="index">{{tag}}</el-tag>
 					</span>
 				</el-card>
 			</div>
