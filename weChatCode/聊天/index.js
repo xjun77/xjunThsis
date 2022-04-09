@@ -1,7 +1,7 @@
 const fs = require("fs");
 const httpServer = require("https").createServer({
-	key : fs.readFileSync("./2_chat.nuotasuo.com.key"),
-	cert: fs.readFileSync("./1_chat.nuotasuo.com_bundle.crt")
+	key : fs.readFileSync("./xjun.cloud.key"),
+	cert: fs.readFileSync("./xjun.cloud_bundle.crt")
 });
 const io = require("socket.io")(httpServer, {
 	cors: true
