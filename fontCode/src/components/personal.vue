@@ -121,7 +121,7 @@
 </template>
 
 <script>
-// const STATICDOMAIN = 'http://nuotasuo.com/' // 图片服务器的域名，展示时使用
+// const STATICDOMAIN = 'http://cdn.xjun.cloud/' // 图片服务器的域名，展示时使用
 const STATICDOMAIN = "http://cdn.xjun.cloud/";
 export default {
   data() {

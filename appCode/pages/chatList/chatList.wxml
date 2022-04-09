@@ -1,7 +1,7 @@
 <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view style="font-size:12px" slot="middle">消息列表</view></cu-custom>
 <view class="cu-list menu-avatar">
     <view class="cu-item" style="border-bottom:1px solid #EEE">
-      <view class="cu-avatar round lg" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+      <view class="cu-avatar round lg" style="background-image:url(http://cdn.xjun.cloud/avator-default.png);"></view>
       <view class="content">
         <view class="text-grey">Nuota</view>
         <view class="text-gray text-sm flex">
@@ -15,7 +15,7 @@
       </view>
     </view>
     <view class="cu-item">
-      <view class="cu-avatar round lg" style="background-image:url(http://nuotasuo.com/avtar/_20210504011025.png);"></view>
+      <view class="cu-avatar round lg" style="background-image:url(http://cdn.xjun.cloud/avtar/_20210504011025.png);"></view>
       <view class="content">
         <view class="text-grey">Tom</view>
         <view class="text-gray text-sm flex">

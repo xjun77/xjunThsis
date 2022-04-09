@@ -1,59 +1,77 @@
 ﻿const fs = require("fs");
 const httpServer = require("https").createServer({
-	key : fs.readFileSync("./2_chat.nuotasuo.com.key"),
-	cert: fs.readFileSync("./1_chat.nuotasuo.com_bundle.crt")
+  key: fs.readFileSync("./2_chat.nuotasuo.com.key"),
+  cert: fs.readFileSync("./1_chat.nuotasuo.com_bundle.crt"),
 });
 
-
 var userNum = 0; //统计在线人数
-var chatList = [{
-  username: 'admin',
-  content: 'Hello，My Friend！',
-  time: '19:49',
-  userAvater: 'http://nuotasuo.com/avater/avater.png'
-},{
-  username: 'Nuota',
-  content: 'HI,how are you?',
-  time: '19:52',
-  userAvater: 'http://nuotasuo.com/avator-default.png'
-},{
-  username: 'admin',
-  content: "I'm Fine,thank you!",
-  time: '19:53',
-  userAvater: 'http://nuotasuo.com/avater/avater.png'
-}];//记录聊天记录
-var WebSocketServer = require('ws').Server;
+var chatList = [
+  {
+    username: "admin",
+    content: "Hello，My Friend！",
+    time: "19:49",
+    userAvater: "http://cdn.xjun.cloud/avater/avater.png",
+  },
+  {
+    username: "Nuota",
+    content: "HI,how are you?",
+    time: "19:52",
+    userAvater: "http://cdn.xjun.cloud/avator-default.png",
+  },
+  {
+    username: "admin",
+    content: "I'm Fine,thank you!",
+    time: "19:53",
+    userAvater: "http://cdn.xjun.cloud/avater/avater.png",
+  },
+]; //记录聊天记录
+var WebSocketServer = require("ws").Server;
 wss = new WebSocketServer({
-	server:httpServer
+  server: httpServer,
 }); //3001 与前端相对应
 //调用 broadcast 广播，实现数据互通和实时更新
 wss.broadcast = function (msg) {
-    wss.clients.forEach(function each(client) {
-        client.send(msg);
-    });
+  wss.clients.forEach(function each(client) {
+    client.send(msg);
+  });
 };
-wss.on('connection', function (ws) {
-    userNum++;//建立连接成功在线人数 +1
-    wss.broadcast(JSON.stringify({ funName: 'userCount', users: userNum, chat: chatList })); //建立连接成功广播一次当前在线人数
-    console.log('Connected clients:', userNum);
-    //接收前端发送过来的数据
-    ws.on('message', function (e) {
-		if(!e) return console.log('无法解析')
-		console.log(e)
-        var resData = JSON.parse(e)
-		console.log(resData)
-        console.log('接收到来自clent的消息：' + resData.msg)
-        chatList.push({ username: resData.username, content: resData.msg ,time:resData.time,userAvater:resData.userAvater});//每次发送信息，都会把信息存起来，然后通过广播传递出去，这样此每次进来的用户就能看到之前的数据
-		wss.broadcast(JSON.stringify({ username: resData.username, msg: resData.msg,time:resData.time,userAvater:resData.userAvater })); //每次发送都相当于广播一次消息
+wss.on("connection", function (ws) {
+  userNum++; //建立连接成功在线人数 +1
+  wss.broadcast(
+    JSON.stringify({ funName: "userCount", users: userNum, chat: chatList })
+  ); //建立连接成功广播一次当前在线人数
+  console.log("Connected clients:", userNum);
+  //接收前端发送过来的数据
+  ws.on("message", function (e) {
+    if (!e) return console.log("无法解析");
+    console.log(e);
+    var resData = JSON.parse(e);
+    console.log(resData);
+    console.log("接收到来自clent的消息：" + resData.msg);
+    chatList.push({
+      username: resData.username,
+      content: resData.msg,
+      time: resData.time,
+      userAvater: resData.userAvater,
+    }); //每次发送信息，都会把信息存起来，然后通过广播传递出去，这样此每次进来的用户就能看到之前的数据
+    wss.broadcast(
+      JSON.stringify({
+        username: resData.username,
+        msg: resData.msg,
+        time: resData.time,
+        userAvater: resData.userAvater,
+      })
+    ); //每次发送都相当于广播一次消息
+  });
+  ws.on("close", function (e) {
+    userNum--; //建立连接关闭在线人数 -1
+    wss.broadcast(
+      JSON.stringify({ funName: "userCount", users: userNum, chat: chatList })
+    ); //建立连接关闭广播一次当前在线人数
+    console.log("Connected clients:", userNum);
+    console.log("长连接已关闭");
+  });
+});
 
-    });
-    ws.on('close', function (e) {
-        userNum--;//建立连接关闭在线人数 -1
-        wss.broadcast(JSON.stringify({ funName: 'userCount', users: userNum, chat: chatList }));//建立连接关闭广播一次当前在线人数
-        console.log('Connected clients:', userNum);
-        console.log('长连接已关闭')
-    })
-})
-
-httpServer.listen(3001)
-console.log('服务器创建成功,3001')
+httpServer.listen(3001);
+console.log("服务器创建成功,3001");

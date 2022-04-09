@@ -7,7 +7,7 @@
   "password": "$2b$10$v.8i.xXqNIeaf0Kieu4SfOdSulBRklnfqS5PTvMZFCjsoWGrdTuqu",
   "name": "Admin",
   "__v": 0,
-  "avatar": "http://nuotasuo.com/avater/avater.png",
+  "avatar": "http://cdn.xjun.cloud/avater/avater.png",
   "date": "2021-04-29",
   "email": "3449645196@qq.com",
   "phone": 1337425909,
@@ -21,7 +21,7 @@
   "username": "Nuota",
   "password": "$2b$10$CwNTrMVSHFvQupLqZZ.AGeF4CoHBLer8An6KicBox4zqzzei9aAwO",
   "__v": 0,
-  "avatar": "http://nuotasuo.com/avator-default.png",
+  "avatar": "http://cdn.xjun.cloud/avator-default.png",
   "email": "Tomcity1@163.com",
   "phone": 13112662610,
   "sex": "男",
@@ -31,7 +31,7 @@
   "_id": {
     "$oid": "608f9869c2845e0458c2868b"
   },
-  "avatar": "http://nuotasuo.com/image/gukong_1622112492971.jpeg",
+  "avatar": "http://cdn.xjun.cloud/image/gukong_1622112492971.jpeg",
   "isAdmin": "0",
   "username": "Tom",
   "password": "$2b$10$WB.gIu2i76r2CeJHo/XUNeoVHUqTPHkR9Wvbb/bCJ4647rAtD4KcK",
@@ -45,7 +45,7 @@
   "_id": {
     "$oid": "609aad9f9a24dc0f4c897c14"
   },
-  "avatar": "http://nuotasuo.com/image/sdfgsegertred.jpg",
+  "avatar": "http://cdn.xjun.cloud/image/sdfgsegertred.jpg",
   "isAdmin": "0",
   "username": "Jack",
   "password": "$2b$10$29NCZtPwuYgJUu3wj8Sv3OD7jjxzA5OFRzecNSTjDYAWpmWi0VOt6",
@@ -59,7 +59,7 @@
   "_id": {
     "$oid": "60afbe9c0f84951584ac9f07"
   },
-  "avatar": "http://nuotasuo.com/image/u%3D3717120934%2C3932520698%26fm%3D26%26gp%3D0.jpg",
+  "avatar": "http://cdn.xjun.cloud/image/u%3D3717120934%2C3932520698%26fm%3D26%26gp%3D0.jpg",
   "isAdmin": "0",
   "username": "james",
   "password": "$2b$10$4bk/CWVbUhmuR7oDifo1HuJCMBsKKRQkIYH0X7nnGALbwQdAjDnca",

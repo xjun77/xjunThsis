@@ -6,11 +6,11 @@
         <text>234</text>
       </view>
     </view>
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avater/avater.png);"></view>
     <view class="date">11:21</view>
   </view>
   <view  class="cu-item">
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avator-default.png);"></view>
     <view class="main">
       <view class="content shadow  bg-blue">
         <text>234</text>
@@ -24,11 +24,11 @@
         <text>234</text>
       </view>
     </view>
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avater/avater.png);"></view>
     <view class="date">11:21</view>
   </view>
   <view  class="cu-item">
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avator-default.png);"></view>
     <view class="main">
       <view class="content shadow  bg-blue">
         <text>234</text>
@@ -42,7 +42,7 @@
         <text>234</text>
       </view>
     </view>
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avater/avater.png);"></view>
     <view class="date">11:21</view>
   </view>
   <view  class="cu-item self">
@@ -51,11 +51,11 @@
         <text>我来自广东，你呢？</text>
       </view>
     </view>
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avater/avater.png);"></view>
     <view class="date">11:07</view>
   </view>
   <view  class="cu-item">
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avator-default.png);"></view>
     <view class="main">
       <view class="content shadow  bg-blue">
         <text>我是广东广州人</text>
@@ -64,7 +64,7 @@
     <view class="date">11:13</view>
   </view>
   <view  class="cu-item">
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avator-default.png);"></view>
     <view class="main">
       <view class="content shadow  bg-blue">
         <text>目前在读大学</text>
@@ -78,7 +78,7 @@
         <text>一样</text>
       </view>
     </view>
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avater/avater.png);"></view>
     <view class="date">11:23</view>
   </view>
   <view  class="cu-item self">
@@ -87,11 +87,11 @@
         <text>我也是读大学中~</text>
       </view>
     </view>
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avater/avater.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avater/avater.png);"></view>
     <view class="date">11:24</view>
   </view>
   <view  class="cu-item">
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avator-default.png);"></view>
     <view class="main">
       <view class="content shadow  bg-blue">
         <text>哈哈，好巧~</text>
@@ -100,7 +100,7 @@
     <view class="date">11:28</view>
   </view>
   <view  class="cu-item">
-    <view class="cu-avatar radius" style="background-image:url(http://nuotasuo.com/avator-default.png);"></view>
+    <view class="cu-avatar radius" style="background-image:url(http://cdn.xjun.cloud/avator-default.png);"></view>
     <view class="main">
       <view class="content shadow  bg-blue">
         <text>找个时间一起出来玩~</text>
