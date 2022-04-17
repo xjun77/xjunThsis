@@ -341,8 +341,8 @@ export default {
   background-color: #3f0e40;
 }
 
-.right-panel {
-}
+// .right-panel {
+// }
 .container {
   height: 75vh;
   width: 70vw;
