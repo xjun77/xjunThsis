@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const URL = "https://xjun.cloud:3000"; //之前想改这个 然后就回退了
+const URL = "https://xjun.cloud:3000";
 // const URL = 'https://xjun'
 const socket = io(URL, { autoConnect: false });
 const user = window.sessionStorage.user;

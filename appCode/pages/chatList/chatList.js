@@ -1,12 +1,14 @@
 // pages/chatList/chatList.js
 const io = require("../../lib/socket.io-mp.js");
-const socket = io("https://chat.nuotasuo.com:3000", {
+// 没有配置https是不是不能写https
+
+const socket = io("https://xjun.cloud:3000", {
   autoConnect: false,
   transports: ["websocket"],
 });
 const sessionID = "609aad9f9a24d10f4c897c14";
 const username = "jack";
-const img = "http://nuotasuo.com/avator-default.png";
+const img = "http://cdn.xjun.cloud/avator-default.png";
 socket.auth = { sessionID, username, img };
 socket.userID = sessionID;
 socket.connect();

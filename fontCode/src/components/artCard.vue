@@ -6,7 +6,7 @@
     >
       <div class="title">
         <span class="tit" @click="toArticle">{{art.title}}</span>
-        <span>{{art.photo_url}}</span>
+        <!-- <span>{{art.photo_url}}</span> -->
       </div>
     </div>
     <div class="under">
